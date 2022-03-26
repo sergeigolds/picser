@@ -4,12 +4,11 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-return new class extends Migration
-{
+return new class extends Migration {
 
     public function up()
     {
-        Schema::create('pictures', function (Blueprint $table) {
+        Schema::create('images', function (Blueprint $table) {
             $table->id();
             $table->string('name');
             $table->string('path');
@@ -21,6 +20,6 @@ return new class extends Migration
 
     public function down()
     {
-        Schema::dropIfExists('pictures');
+        Schema::dropIfExists('images');
     }
 };

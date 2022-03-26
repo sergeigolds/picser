@@ -3,9 +3,9 @@
 namespace Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
-use Illuminate\Support\Str;
 
-class PictureFactory extends Factory
+
+class ImageFactory extends Factory
 {
 
     public function definition()
@@ -14,9 +14,9 @@ class PictureFactory extends Factory
         $original_name = $this->faker->bothify('??#?###?#?#.jpg');
         return [
             'name' => $name,
-            'path' => '/new-path/'. $name,
+            'path' => '/new-path/' . $name,
             'original_name' => $original_name,
-            'original_path' => '/old-path/'. $original_name,
+            'original_path' => '/old-path/' . $original_name,
         ];
     }
 }
