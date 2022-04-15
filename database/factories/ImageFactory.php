@@ -10,13 +10,12 @@ class ImageFactory extends Factory
 
     public function definition()
     {
+        $id = $this->faker->uuid();
         $name = $this->faker->bothify('modifed#?##??#.webp');
         $original_name = $this->faker->bothify('??#?###?#?#.jpg');
         return [
-            'name' => $name,
-            'path' => '/new-path/' . $name,
-            'original_name' => $original_name,
-            'original_path' => '/old-path/' . $original_name,
+            'uuid' => $id,
+            'path' => '/new-path/' . $id . '.webp',
         ];
     }
 }
