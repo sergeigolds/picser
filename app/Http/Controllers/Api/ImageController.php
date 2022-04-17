@@ -34,6 +34,7 @@ class ImageController extends Controller
         $format = $request->query('f');
         $quality = $request->query('q');
 
+
         if ($width || $height || $format || $quality) {
 
             $image = Image::cache(function ($image) use ($storedImage, $width, $height, $format, $quality) {
@@ -44,7 +45,7 @@ class ImageController extends Controller
                     })->encode($format, $quality);
                 }
 
-                return $image->make($storedImage);
+                return $image->make($storedImage)->encode($format, $quality);
 
             }, 1, true);
 
