@@ -2,18 +2,18 @@
 
 namespace App\Models;
 
-use App\Traits\Uuid;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Image extends Model
+class ApiToken extends Model
 {
     use HasFactory;
 
     protected $fillable = [
-        'uuid',
-        'path',
-        'url',
+        'token_id',
+        'user_id',
+        'token_name',
+        'token_key',
+        'token_domain',
     ];
-
 }
